@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFLIX</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/favicon-32x32.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <div class="col d-flex align-items-center">
+            <div class="container-fluid col-sm-2 image-logo">
+                <a href="http://"><img src="./img/Icone.png" class="mt-2" alt="Logo" srcset=""></a>
+            </div>
+            <div class="container col-sm-2 login">
+                <a href="http://" class="btn btn-danger">Acessar <i class="bi bi-person-circle"></i></a>
+            </div>
+        </div>
+    </header>
+    <main class="container-fluid d-flex justify-content-center align-items-center">
+        <div class="container text-center">
+            <div class="row mt-3">
+                <h2 class=".d-block .d-sm-none">Tenha acesso a conteúdos exclusivos</h2>
+                <div class="input-group mt-4">
+                    <input type="text" class="form-control email input-email-button" placeholder="Digite o seu e-mail"
+                        aria-label="Digite o seu e-mail" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-danger input-email-button" type="button" id="button-addon2">Enviar <i
+                                class="bi bi-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="section-1">
+        <div class="text-center video-title">
+            <h2>Campeões de Bilheteria</h2>
+            <h4>A sua disposição</h4>
+        </div>
+        <div class="container embed-responsive embed-responsive-16by9">
+            <iframe width="100%" height="600" src="https://www.youtube.com/embed/m4jfE-TxC24"
+                title="Parasita | Trailer Legendado" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+    <section class="section-2">
+        <div class="text-center video-title">
+            <h2>O Melhor Catálogo</h2>
+            <h4>Para todos os gostos</h4>
+        </div>
+        <div class="text-center d-flex align-items-center justify-content-center flex-column">
+            <!-- Área para exibir informações do filme selecionado -->
+            <div id="film-info" class="film-info text-center mb-5 active">
+                <!-- As informações do filme serão exibidas aqui -->
+            </div>
+        </div>
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-8 col-sm-4 mb-4 text-center"><img src="./img/poster1-parasite.jpg" class="img-fluid film"
+                    alt="" srcset=""
+                    onclick="showFilmInfo('Parasita','./img/poster1-parasite.jpg', 'Em Parasita, toda a família de Ki-taek está desempregada, vivendo num porão sujo e apertado. Uma obra do acaso faz com que o filho adolescente da família comece a dar aulas de inglês à garota de uma família rica. Fascinados com a vida luxuosa destas pessoas, pai, mãe, filho e filha bolam um plano para se infiltrarem também na família burguesa, um a um. No entanto, os segredos e mentiras necessários à ascensão social custarão caro a todos.', '2019', 'Drama', 'https://www.youtube.com/watch?v=SEUXfv87Wpk')">
+            </div>
+            <div class="col-8 col-sm-4 mb-4 text-center"><img src="./img/poster2-avengers-endgame.jpg"
+                    class="img-fluid film" alt="" srcset=""
+                    onclick="showFilmInfo('Vingadores Ultimato', './img/poster2-avengers-endgame.jpg', 'Em Vingadores: Ultimato, após Thanos eliminar metade das criaturas vivas em Vingadores: Guerra Infinita, os heróis precisam lidar com a dor da perda de amigos e seus entes queridos. Com Tony Stark (Robert Downey Jr.) vagando perdido no espaço sem água nem comida, o Capitão América/Steve Rogers (Chris Evans) e a Viúva Negra/Natasha Romanov (Scarlett Johansson) precisam liderar a resistência contra o titã louco.', '2019', 'Ação, Aventura, Ficção Científica', 'https://www.youtube.com/watch?v=g6ng8iy-l0U')">
+            </div>
+            <div class="col-8 col-sm-4 mb-4 text-center"><img src="./img/poster3-oppenheimer.jpg" class="img-fluid film"
+                    alt="" srcset=""
+                    onclick="showFilmInfo('Oppenheimer', './img/poster3-oppenheimer.jpg', 'Oppenheimer é um filme histórico de drama dirigido por Christopher Nolan e baseado no livro biográfico vencedor do Prêmio Pulitzer, Prometeu Americano: O Triunfo e a Tragédia de J. Robert Oppenheimer, escrito por Kai Bird e Martin J. Sherwin. Ambientado na Segunda Guerra Mundial, o longa acompanha a vida de J. Robert Oppenheimer (Cillian Murphy), físico teórico da Universidade da Califórnia e diretor do Laboratório de Los Alamos durante o Projeto Manhattan - que tinha a missão de projetar e construir as primeiras bombas atômicas. A trama acompanha o físico e um grupo formado por outros cientistas ao longo do processo de desenvolvimento da arma nuclear que foi responsável pelas tragédias nas cidades de Hiroshima e Nagasaki, no Japão, em 1945. Além de Cillian, o elenco também traz nomes como Emily Blunt, Matt Damon, Robert Downey Jr., Florence Pugh, Gary Oldman, Jack Quaid, Gustaf Skarsgård, Rami Malek e Kenneth Branagh.', '2023', 'Histórico, Suspense', 'https://www.youtube.com/watch?v=bK6ldnjE3Y0')">
+            </div>
+        </div>
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-8 col-sm-4 mb-4 text-center"><img src="./img/poster4-inception.jpg" class="img-fluid film"
+                    alt="" srcset=""
+                    onclick="showFilmInfo('A Origem', './img/poster4-inception.jpg', 'Em um mundo onde é possível entrar na mente humana, Cobb (Leonardo DiCaprio) está entre os melhores na arte de roubar segredos valiosos do inconsciente, durante o estado de sono. Além disto ele é um fugitivo, pois está impedido de retornar aos Estados Unidos devido à morte de Mal (Marion Cotillard). Desesperado para rever seus filhos, Cobb aceita a ousada missão proposta por Saito (Ken Watanabe), um empresário japonês: entrar na mente de Richard Fischer (Cillian Murphy), o herdeiro de um império econômico, e plantar a ideia de desmembrá-lo. Para realizar este feito ele conta com a ajuda do parceiro Arthur (Joseph Gordon-Levitt), a inexperiente arquiteta de sonhos Ariadne (Ellen Page) e Eames (Tom Hardy), que consegue se disfarçar de forma precisa no mundo dos sonhos.', '2010', 'Ficção Científica, Suspense', 'https://www.youtube.com/watch?v=R_VX0e0PX90')">
+            </div>
+            <div class="col-8 col-sm-4 mb-4 text-center"><img src="./img/poster5-jurassic-park.jpg"
+                    class="img-fluid film" alt="" srcset=""
+                    onclick="showFilmInfo('Jurassic Park', './img/poster5-jurassic-park.jpg', 'Um parque construído por um milionário (Richard Attenborough) tem como habitantes dinossauros diversos, extintos a sessenta e cinco milhões de anos. Isto é possível por ter sido encontrado um inseto fossilizado, que tinha sugado sangue destes dinossauros, de onde pôde-se isolar o DNA, o código químico da vida, e, a partir deste ponto, recriá-los em laboratório. Mas, o que parecia ser um sonho se torna um pesadelo, quando a experiência sai do controle de seus criadores.', '1993', 'Aventura, Ficção Científica', 'https://www.youtube.com/watch?v=QWBKEmWWL38')">
+            </div>
+            <div class="col-8 col-sm-4 mb-4 text-center"><img src="./img/poster6-interstellar.jpg"
+                    class="img-fluid film" alt="" srcset=""
+                    onclick="showFilmInfo('Interestelar', './img/poster6-interstellar.jpg', 'Após ver a Terra consumindo boa parte de suas reservas naturais, um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie. Cooper (Matthew McConaughey) é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand (Anne Hathaway), Jenkins (Marlon Sanders) e Doyle (Wes Bentley), ele seguirá em busca de uma nova casa. Com o passar dos anos, sua filha Murph (Mackenzie Foy e Jessica Chastain) investirá numa própria jornada para também tentar salvar a população do planeta.', '2014', 'Ficção Científica, Drama', 'https://www.youtube.com/watch?v=hHBsKHVLAYc')">
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

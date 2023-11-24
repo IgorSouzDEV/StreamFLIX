@@ -19,6 +19,9 @@ function showFilmInfo(title, posterURL, synopsis, releaseDate, genre, trailerLin
 
     // Adicionar a classe 'active' ao poster clicado
     event.target.classList.add('active');
+
+    // Rolar a página até a seção film-info
+    filmInfoElement.scrollIntoView({ behavior: 'smooth' });
 }
 
 // Ativar automaticamente o primeiro poster e exibir suas informações ao carregar a página
